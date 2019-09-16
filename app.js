@@ -13,7 +13,7 @@ app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 // cors
 app.use(cors());
 
-app.get('/google', asyncHandler(async (req, res, next) => {
+app.get('/g', asyncHandler(async (req, res, next) => {
     try {
         googleTrends.dailyTrends({ geo: req.query.country })
             .then(function (results) {
